@@ -1,0 +1,5 @@
+DROP DATABASE imagedb;
+CREATE DATABASE IF NOT EXISTS imagedb;
+USE imagedb;
+
+SELECT * FROM images;
