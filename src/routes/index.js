@@ -28,13 +28,16 @@ router.get('/api/images', async (req,res) => {
 })
 
 router.post('/api/image', async (req, res) => {
+    console.log("Posting image... image=",req.body)
   
-    const { image } = req.body;
-
-    if (!image || image == null || image === "") {
+    const  image  = req.body;
+    console.log("1...")
+    if (image == null || image === "") {
+      console.log("image error...")
       res.status(400).json({ error: 'Bad Request: Missing required fields' });
       return;
     }
+    console.log("2...")
     const random_uuid = uuidv4();
     const LocalTime = new Date(); 
     console.log("id="+random_uuid, " image="+image, " date="+LocalTime)
@@ -47,7 +50,7 @@ router.post('/api/image', async (req, res) => {
   }
 });
 
-router.post('/api/image-update', async (req, res) => {
+router.put('/api/image', async (req, res) => {
   
   const { id ,image } = req.body;
 
