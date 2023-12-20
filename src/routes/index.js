@@ -20,6 +20,8 @@ router.get('/api/data', (req, res) => {
 router.get('/api/images', async (req,res) => {
   try {
     const images = await imageRepo.getAllImages();
+    console.log("Getting images="+images[1].image)
+    res.header('Content-Type', 'application/json')
     res.json(images);
   } catch (error) {
     console.error('Error fetching images:', error);
@@ -30,7 +32,7 @@ router.get('/api/images', async (req,res) => {
 router.post('/api/image', async (req, res) => {
     console.log("Posting image... image=",req.body)
   
-    const  image  = req.body;
+    const  {image}  = req.body;
     console.log("1...")
     if (image == null || image === "") {
       console.log("image error...")

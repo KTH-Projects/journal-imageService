@@ -17,7 +17,7 @@ var con = mysql.createConnection({
 const imageTableQuery = `
     CREATE TABLE IF NOT EXISTS images (
       id VARCHAR(255) PRIMARY KEY,
-      image VARCHAR(255) NOT NULL,
+      image LONGTEXT NOT NULL,
       date VARCHAR(255) NOT NULL
     )
   `;
