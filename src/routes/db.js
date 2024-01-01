@@ -3,10 +3,12 @@ const mysql = require('mysql2');
 
 
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "12345",
-    database: "imagedb"
+  
+    host: process.env.REACT_APP_MYSQL_IP,
+    user: process.env.REACT_APP_MYSQL_USER,
+    password: process.env.REACT_APP_MYSQL_ROOT_PASSWORD,
+    port:process.env.REACT_APP_MYSQL_PORT,
+    database: process.env.REACT_APP_MYSQL_DATABASE
   });
   
   con.connect(function(err) {
