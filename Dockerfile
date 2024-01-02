@@ -9,7 +9,7 @@ RUN npm ci
 COPY . /code
 
 # Expose the port your application runs on
-EXPOSE 3000 
+EXPOSE 8082 
 
 ENV CI=true
 
