@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/app.js --exec babel-node --presets babel-preset-env",
+    "start": "nodemon src/app.js --max_old_space_size=4096 --exec babel-node --presets babel-preset-env",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
