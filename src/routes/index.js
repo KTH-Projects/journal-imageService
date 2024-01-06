@@ -20,7 +20,7 @@ router.get('/api/data', (req, res) => {
 router.get('/api/images', async (req,res) => {
   try {
     const images = await imageRepo.getAllImages();
-    console.log("Getting images="+images[3].image)
+    //console.log("Getting images="+images[3].image)
     images.forEach(element => {
         console.log("Image size="+element.image.length)
     });
