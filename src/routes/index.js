@@ -1,5 +1,5 @@
 const express = require('express');
-const imageRepo = require('./imageRepo');
+const imageRepo = require('./ImageRepo');
 const { uuidv4 } = require('../utility/Guid');
 const router = express.Router();
 //const LocalTime = require("@js-joda/core").LocalTime.now()
