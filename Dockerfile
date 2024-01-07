@@ -16,7 +16,7 @@ ENV REACT_APP_MYSQL_DATABASE=imageDB
 
 
 # Expose the port your application runs on
-EXPOSE 8082 
+EXPOSE 8084
 
 ENV CI=true
 
